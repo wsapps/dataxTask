@@ -1,0 +1,15 @@
+server.port: 8080
+
+solon.app:
+  name: 'datax-task'
+  group: 'cn.ewsio'
+  
+  logging.appender:
+    console:
+      level: TRACE
+    file:
+      name: "logs/${solon.app.name}"
+      rolling: "logs/${solon.app.name}_%d{yyyy-MM-dd}_%i.log"
+      level: INFO
+      maxFileSize: "10 MB"
+      maxHistory: "7"

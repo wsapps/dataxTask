@@ -1,0 +1,55 @@
+	{
+		"job": {
+			"setting": {
+				"speed": {
+					"channel": 8
+				},
+				"errorLimit": {
+					"record": 0,
+					"percentage": 0.02
+				}
+			},
+			"content": [
+				{
+					"reader": {
+						"name": "mysqlreader",
+						"parameter": {
+							"username": "",
+							"password": "",
+							"fetchSize": 1024,
+							"connection": [
+								{
+									"jdbcUrl": [
+										""
+									]
+								}
+							]
+						}
+					},
+					"writer": {
+						"name": "clickhousewriter",
+						"parameter": {
+							"username": "",
+							"password": "",
+							"column": [
+								"*"
+							],
+							"connection": [
+								{
+									"jdbcUrl": "",
+									"table": [
+										""
+									]
+								}
+							],
+							"preSql": [],
+							"postSql": [],
+							"batchSize": 1024,
+							"dryRun": false,
+							"writeMode": "insert"
+						}
+					}
+				}
+			]
+		}
+	}
