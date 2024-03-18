@@ -3,7 +3,7 @@ server.port: 8080
 solon.app:
   name: 'datax-task'
   group: 'cn.ewsio'
-  
+
   logging.appender:
     console:
       level: TRACE
@@ -13,3 +13,5 @@ solon.app:
       level: INFO
       maxFileSize: "10 MB"
       maxHistory: "7"
+      
+  dataxPath: D:\\datax\\bin\\datax.py
