@@ -1,15 +1,16 @@
 package cn.ewsio.datax.component;
 
-import cn.ewsio.datax.entity.TaskNode;
-import cn.hutool.core.io.file.FileReader;
-import cn.hutool.json.JSONObject;
-import cn.hutool.json.JSONUtil;
-import org.noear.solon.annotation.Component;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.noear.solon.annotation.Component;
+
+import cn.ewsio.datax.entity.TaskDataxNode;
+import cn.hutool.core.io.file.FileReader;
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
 
 @Component
 public class TaskXMLComponent {
@@ -56,7 +57,7 @@ public class TaskXMLComponent {
         WRITER_NAME_MAP.put("com.clickhouse.jdbc.ClickHouseDriver", "clickhousewriter");
     }
 
-    public String createXML(TaskNode taskNode) {
+    public String createXML(TaskDataxNode taskNode) {
         String readerName = READER_NAME_MAP.get(taskNode.getrDriver());
         String writerName = WRITER_NAME_MAP.get(taskNode.getwDriver());
 

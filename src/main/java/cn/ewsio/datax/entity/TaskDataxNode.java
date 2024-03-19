@@ -3,12 +3,11 @@ package cn.ewsio.datax.entity;
 import cn.hutool.core.annotation.Alias;
 import cn.hutool.json.JSONUtil;
 
-public class TaskNode {
+public class TaskDataxNode {
 
 	private Long id;
 
 	@Alias("r_table_schema")
-
 	private String rTableSchema;
 
 	@Alias("r_tablename")
